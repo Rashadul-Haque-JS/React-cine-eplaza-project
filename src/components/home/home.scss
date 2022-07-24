@@ -1,0 +1,13 @@
+@import '../../common/color.scss';
+
+.pageUpperSection{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    .sectionsHeader{
+    color: $font-primary;
+    padding-bottom: 16px;
+
+}
+
+}

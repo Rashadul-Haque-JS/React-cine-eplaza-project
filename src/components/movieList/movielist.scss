@@ -1,0 +1,14 @@
+@import '../../common/color.scss';
+
+
+
+.poster{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(180px, 1fr));
+    color:$font-primary;
+   grid-column-gap: 24px;
+    grid-row-gap: 50px;
+
+}
+
+
