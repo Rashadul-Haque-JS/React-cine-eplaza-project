@@ -58,15 +58,15 @@ export const Home = ()=> {
       <div className='movie-container'>
         <div className='pageUpperSection'>
           <h2 className='sectionsHeader'>Movies</h2>
-          <div>
+          <form>
             <input style={{padding:'3px'}} type='text' value={query}
               onChange={(e) => setQuery(e.target.value)} placeholder='search by name'
               required/>
-            <button style={{padding:'3px'}} onClick={() => {
+            <button style={{padding:'3px', cursor:'pointer'}} onClick={() => {
           fetchNewCinema();
           fetchNewSeries();
         }}>search</button>
-          </div>
+          </form>
 
         </div>
 

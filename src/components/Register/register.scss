@@ -1,12 +1,12 @@
 @import '../../common/color.scss';
 
-.login{
+.register{
     display: flex;
     justify-content: center;
 
     .form-wrapper{
-         margin: 100px 0px 300px 0px;
-        .login-container{
+         margin: 100px 0px;
+        .regi-container{
         width: 300px;
         display:flex;
         flex-direction: column;
@@ -26,22 +26,11 @@
                 color: $font-secondary;
                 border-radius: 5px;
         }
-
         button{
             cursor: pointer;
         }
     }
-    .manageLogin{
-        display: flex;
-        justify-content: space-between;
-        .reset, .register{
-        margin-top: 8px;
-        color:rgb(16, 100, 235);
-        text-decoration: underline;
-    }
-    
 
-    }
 
     }
 
