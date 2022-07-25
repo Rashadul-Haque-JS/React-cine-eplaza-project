@@ -9,9 +9,9 @@ import { addMovies,addShows } from '../../features/movies/movieSlice'
 export const Home = ()=> {
   const [query, setQuery] = useState('Jurassic');
   const dispatch = useDispatch();
-   useEffect(() => {
-
-     try {
+  const APIKey = process.env.REACT_APP_OMDB_API_KEY
+  useEffect(() => {
+    try {
        const fetchCinema = async()=>{
          const response = await cineAPI.get(`?apikey=${APIKey}&s=${query}&type=movie`);
          dispatch(addMovies(response.data))

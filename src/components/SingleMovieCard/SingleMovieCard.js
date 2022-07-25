@@ -2,13 +2,13 @@ import React from 'react'
 import './singleMovieCard.scss'
 import { Link } from 'react-router-dom'
 import cineAPI from '../../common/api/movies'
-import APIKey from '../../common/api/apiKeys/movieAPIKey'
-// import './home.scss'
 import { useDispatch } from 'react-redux'
-import {addDetails} from '../../features/movies/movieSlice'
+import { addDetails } from '../../features/movies/movieSlice'
+
 export default function SingleMovie({movie}) {
 
   const dispatch = useDispatch()
+  const APIKey = process.env.REACT_APP_OMDB_API_KEY
 
   const fetchDetails = async()=>{
          const response = await cineAPI.get(`?apikey=${APIKey}&i=${movie.imdbID}&plot=full`);
@@ -30,7 +30,7 @@ export default function SingleMovie({movie}) {
               <p>{movie.Year}</p>
               </div>
 
-              {movie.Type === 'series' && <p>S</p>}
+              {movie.Type === 'series' && <p style={{color:'#FFD700'}}>series</p>}
           </div>
           </Link>
     </div>
