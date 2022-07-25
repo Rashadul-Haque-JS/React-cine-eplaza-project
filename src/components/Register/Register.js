@@ -20,7 +20,7 @@ export default function Register() {
     <input type="text" placeholder='street number' value={street} onChange={(e) => setStreet(e.target.value)} required />
     <input type="text" placeholder='post code' value={postCode} onChange={(e) => setPostCode(e.target.value)} required />
     <input type="text" placeholder='city' value={city} onChange={(e) => setCity(e.target.value)} required />
-    <input type="text" placeholder='country of resident' value={country} onChange={(e) => setCountry(e.target.value)} required />
+    <input type="text" placeholder='country of residence' value={country} onChange={(e) => setCountry(e.target.value)} required />
     <input type="text" placeholder='email' value={email} onChange={(e) => setEmail(e.target.value)} required />
     <input type="text" placeholder='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
     <input type="text" placeholder='confirm password' value={repeatPassword} onChange={(e) => setrepeatPassword(e.target.value)} required />
