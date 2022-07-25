@@ -1,0 +1,31 @@
+@import '../../common/color.scss';
+
+.movieDetails{
+    span{
+        color:$font-primary;
+    }
+    .summary{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 30px;
+        color: $font-secondary;
+
+        .description{
+          line-height: 1.8rem;
+          h2{
+            font-size: 20px;
+            color:$font-primary;
+        }
+        }
+    }
+
+
+    .plot{
+    padding-top: 20px;
+    color:$font-secondary;
+    line-height: 1.5rem;
+    word-spacing: 2px;
+
+    }
+}
