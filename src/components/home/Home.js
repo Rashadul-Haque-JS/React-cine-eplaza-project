@@ -3,7 +3,7 @@ import MovieList from '../movieList/MovieList'
 import cineAPI from '../../common/api/movies'
 import './home.scss'
 import { useDispatch } from 'react-redux'
-import { addMovies,addShows } from '../../app/movies/movieSlice'
+import { addMovies,addShows } from '../../features/movies/movieSlice'
 
 export const Home = ()=> {
   const [query, setQuery] = useState('Jurassic');

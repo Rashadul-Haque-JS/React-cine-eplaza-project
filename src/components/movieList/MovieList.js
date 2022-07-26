@@ -2,7 +2,7 @@ import React from 'react'
 import './movieList.scss'
 import SingleMovie from '../SingleMovieCard/SingleMovieCard'
 import { useSelector } from 'react-redux'
-import { getMovies, getShows } from '../../app/movies/movieSlice'
+import { getMovies, getShows } from '../../features/movies/movieSlice'
 
 export default function MovieList() {
     const movies = useSelector(getMovies)
