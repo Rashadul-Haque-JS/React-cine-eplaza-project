@@ -1,10 +1,9 @@
 import React, { useEffect,useState} from 'react'
 import MovieList from '../movieList/MovieList'
 import cineAPI from '../../common/api/movies'
-import APIKey from '../../common/api/apiKeys/movieAPIKey'
 import './home.scss'
 import { useDispatch } from 'react-redux'
-import { addMovies,addShows } from '../../features/movies/movieSlice'
+import { addMovies,addShows } from '../../app/movies/movieSlice'
 
 export const Home = ()=> {
   const [query, setQuery] = useState('Jurassic');
@@ -38,14 +37,17 @@ export const Home = ()=> {
    }, [])
 
   const fetchNewCinema = async()=>{
+
          const response = await cineAPI.get(`?apikey=${APIKey}&s=${query}&type=movie`);
     dispatch(addMovies(response.data))
     setQuery('')
 
 
+
     }
 
   const fetchNewSeries = async()=>{
+
          const response = await cineAPI.get(`?apikey=${APIKey}&s=${query}&type=series`);
          dispatch(addShows(response.data))
 
@@ -58,7 +60,7 @@ export const Home = ()=> {
       <div className='movie-container'>
         <div className='pageUpperSection'>
           <h2 className='sectionsHeader'>Movies</h2>
-          <form>
+          <div>
             <input style={{padding:'3px'}} type='text' value={query}
               onChange={(e) => setQuery(e.target.value)} placeholder='search by name'
               required/>
@@ -66,7 +68,7 @@ export const Home = ()=> {
           fetchNewCinema();
           fetchNewSeries();
         }}>search</button>
-          </form>
+          </div>
 
         </div>
 

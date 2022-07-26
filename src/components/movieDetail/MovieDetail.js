@@ -2,7 +2,7 @@ import React from 'react'
 
 import './movieDetail.scss'
 
-import {getDetails} from '../../features/movies/movieSlice'
+import {getDetails} from '../../app/movies/movieSlice'
 import { useSelector } from 'react-redux'
 
 

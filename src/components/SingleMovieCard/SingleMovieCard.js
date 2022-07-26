@@ -3,7 +3,7 @@ import './singleMovieCard.scss'
 import { Link } from 'react-router-dom'
 import cineAPI from '../../common/api/movies'
 import { useDispatch } from 'react-redux'
-import { addDetails } from '../../features/movies/movieSlice'
+import { addDetails } from '../../app/movies/movieSlice'
 
 export default function SingleMovie({movie}) {
 
