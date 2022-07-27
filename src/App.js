@@ -8,6 +8,7 @@ import MovieDetails from './components/movieDetail/MovieDetail'
 import Login from './components/login/Login'
 import ResetPasword from './components/ResetPassword/ResetPasword';
 import Register from './components/Register/Register';
+import Screen from './components/Screen/Screen';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route path="/movieInfo/:name" element={<MovieDetails />} />
             <Route path="/login" element={<Login />} />
             <Route path="/resetPassword" element={<ResetPasword />} />
-             <Route path="/register" element={<Register />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/screen" element={<Screen />} />
           </Routes>
           </div>
         <Footer/>

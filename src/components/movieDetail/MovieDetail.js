@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './movieDetail.scss'
 
 import { getDetails } from '../../features/movies/movieSlice'
 import { useSelector } from 'react-redux'
-
+import playIcon from '../../assets/images/play.png'
 
 export default function MovieDetail() {
 
@@ -45,6 +46,9 @@ export default function MovieDetail() {
       <hr className='h-line' />
       <p className='plot'><span>Plot:</span></p>
       <p className='plot'>{details.Plot}</p>
+      <Link className='playIcon' to={'/screen'}>
+        <img  src={playIcon} alt='play icon' />
+      </Link>
 
     </div>
 
