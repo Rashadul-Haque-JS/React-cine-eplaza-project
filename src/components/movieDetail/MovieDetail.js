@@ -3,13 +3,23 @@ import { Link } from 'react-router-dom'
 
 import './movieDetail.scss'
 
-import { getDetails } from '../../features/movies/movieSlice'
+import { getDetails, addType } from '../../features/movies/movieSlice'
 import { useSelector } from 'react-redux'
 import playIcon from '../../assets/images/play.png'
+import { useDispatch } from 'react-redux'
+
 
 export default function MovieDetail() {
+  const dispatch = useDispatch()
 
   const details = useSelector(getDetails)
+
+  const fetchType = async()=>{
+
+   dispatch(addType(details.Type))
+
+
+  }
 
 
   return (
@@ -46,7 +56,7 @@ export default function MovieDetail() {
       <hr className='h-line' />
       <p className='plot'><span>Plot:</span></p>
       <p className='plot'>{details.Plot}</p>
-      <Link className='playIcon' to={'/screen'}>
+      <Link className='playIcon' to={'/screen'} onClick={fetchType}>
         <img  src={playIcon} alt='play icon' />
       </Link>
 
