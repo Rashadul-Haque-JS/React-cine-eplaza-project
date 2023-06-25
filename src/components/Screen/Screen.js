@@ -13,10 +13,10 @@ export default function Screen() {
         {videoType === 'movie' && <source src={jurassic} type="video/mp4" />}
 
         {videoType === 'series' && <source src={encanto} type="video/ogg"/>}
-
-
 </video>
 
     </div>
   )
 }
+
+
