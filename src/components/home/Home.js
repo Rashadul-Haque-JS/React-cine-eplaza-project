@@ -34,7 +34,7 @@ export const Home = ()=> {
        console.log('ERROR IS ', err);
      }
 
-   }, [APIKey])
+   }, [APIKey, dispatch, query])
 
   const fetchNewCinema = async()=>{
 
